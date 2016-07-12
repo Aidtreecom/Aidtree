@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aidtree</title>
+    <link href="/aidtree/styles/aidstyle.css" media="all" rel="stylesheet" />
+    <script src="https://landingjs.braintreegateway.com/v1/braintree.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="MIIBCgKCAQEA+n9uLedN5jJhZkMHwsRfFzZ7HyrgLD1zbZCRXLMK16t8igiZiPMRTWriOCDA+G+aQ7DEc9T2WP4j90GQ5JOCrRtbVzLS5BQPkYVM/plR0uw0QbsGZP1OMTLTjArunzg4+qCHFUNwyRX3BRbW+X8f97bgixChWXX2+e/DSNvh+Mperop4aHxZVbEaFxQoatCTilaFFDhzeNoHOWWiSkGbFt3MNS2R3pZUxnKfFU1A9FuVPkpJtZ0jkPXGXaQ5PpohQfJokvHsP3/A5IQrBnlDbbBJ4xvreb2o4SCRCj9Tehtlwpo9ky+wU2pkUL+Pvt9gJmA355k/HVc0lZvGbn1U5wIDAQAB" name="braintree-key" />
+    <meta content="http://stagging.aidtree.com/assets/logo-ef61bb15a116df6ed35296c7883389bb.png" property="og:image" />
+    <meta content="CONTRIBUTIONS AND DISCOUNTS" property="og:title" />
+    <meta content="Please help me support the cause at the zip code below. You will also save money at participating local businesses. Click here to see more." property="og:description" />
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="ghw1tpDnMfuKuYgYSnPTMY3rAEcxNIq7lMM6KnXvO6I=" name="csrf-token" />
+</head>
+
+<body class="registrations registrations-new">
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="small-2 columns">
+                    <a href="/"><img alt="Logo" class="logo" data-intro="We hope you&#39;ve enjoyed this brief introduction to Aidtree. Remember to download the Iphone App so you can use Aidtree on the move." data-step="9" src="/assets/logo-ef61bb15a116df6ed35296c7883389bb.png" /></a>
+                </div>
+                <div class="small-5 columns">
+                    <form accept-charset="UTF-8" action="/close_in_area/public_search" class="controls" method="get">
+                        <div style="margin:0;padding:0;display:inline">
+                            <input name="utf8" type="hidden" value="&#x2713;" />
+                        </div>
+                        <input class="search" data-zipcode="null" id="zipcode" name="zipcode" placeholder="SEARCH BUSINESSES AND TREES. ENTER ZIPCODE" type="text" />
+                    </form>
+                </div>
+                <div class="small-5 columns"></div>
+            </div>
+        </div>
+    </header>
+    <div id="body_container">
+        <div class="container">
+            <div class="row">
+                <div class="large-7 columns large-offset-3">
+                    <h1 class="arrow"><span class="icon-right-bold"></span>Register Now </h1>
+                    <form accept-charset="UTF-8" action="/users" class="simple_form new_user" id="new_user" method="post" novalidate="novalidate">
+                        <div style="margin:0;padding:0;display:inline">
+                            <input name="utf8" type="hidden" value="&#x2713;" />
+                            <input name="authenticity_token" type="hidden" value="ghw1tpDnMfuKuYgYSnPTMY3rAEcxNIq7lMM6KnXvO6I=" />
+                        </div>
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <div class="input string required user_first_name">
+                                    <input autofocus="autofocus" class="string required" id="user_first_name" name="user[first_name]" placeholder="First Name" type="text" />
+                                </div>
+                            </div>
+                            <div class="large-6 columns">
+                                <div class="input string required user_last_name">
+                                    <input class="string required" id="user_last_name" name="user[last_name]" placeholder="Last Name" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <div class="input email optional user_email">
+                                    <input class="string email optional" id="user_email" name="user[email]" placeholder="Email Address" type="email" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <div class="input password optional user_password">
+                                    <input class="password optional" id="user_password" name="user[password]" placeholder="Password" type="password" />
+                                </div>
+                            </div>
+                            <div class="large-6 columns">
+                                <div class="input password optional user_password_confirmation">
+                                    <input class="password optional" id="user_password_confirmation" name="user[password_confirmation]" placeholder="Password Confirmation" type="password" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <div class="input string required user_zipcode">
+                                    <input class="string required" id="user_zipcode" name="user[zipcode]" placeholder="Zip Code" type="text" />
+                                </div>
+                            </div>
+                            <div class="large-5 columns">
+                                <div class="input tel optional user_phone">
+                                    <input class="string tel optional" data-phone="true" id="user_phone" name="user[phone]" placeholder="Phone" type="tel" />
+                                </div>
+                            </div>
+                            <div class="large-1 columns" style="float: left;">
+                                <label data-tooltip="" for="user_phone" title="Phone Numbers are never given out and are only used for password verification"><span></span></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-6 columns">
+                                <div class="input string optional user_dob_str">
+                                    <input class="string optional" data-datepicker="null" id="user_dob_str" name="user[dob_str]" placeholder="Date of birth" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns text-center">
+                                <div class="input boolean optional user_terms_and_conditions">
+                                    <input name="user[terms_and_conditions]" type="hidden" value="0" />
+                                    <label class="boolean optional control-label checkbox" for="user_terms_and_conditions">
+                                        <input class="boolean optional" id="user_terms_and_conditions" name="user[terms_and_conditions]" type="checkbox" value="1" />Accept all conditions</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns text-center" style="margin-bottom: 10px;"><a data-reveal-id="terms-and-conditions" href="#">See Terms And Conditions</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns text-center">
+                                <input class="button radius success large" data-disable-with="Processing..." name="commit" type="submit" value="Register Me!" />
+                            </div>
+                        </div>
+                    </form><a class="button radius success inline" href="/users/sign_in" style="margin-right: 15px;">Sign in</a></div>
+            </div>
+        </div>
+        <div class="reveal-modal" data-reveal="" id="terms-and-conditions">
+            <div class="row">
+                <div class="large-12 terms">
+                    <h1 class="title">TERMS OF USE</h1>
+                    <p>By entering your email you agree to receive Aidtree e-mails that inform you of correspondence that supports your cause ("Tree"). You may unsubscribe at anytime.</p>
+                    <p>Welcome to the Aidtree Site (defined below). By using it, you are agreeing to these Terms of Use (defined below). Please read them carefully. If you have any questions, contact us at <a href="mailto:questions@aidtree.com">questions@aidtree.com</a></p>
+                    <p>These Terms of Use were last updated on Dec 13, 2016.</p>
+                    <h3>ACCEPTANCE OF TERMS OF USE</h3>
+                    <p>Aidtree, Inc. (“Aidtree” "we" or “us” or “our”) owns and operates the website, www.Aidtree.com, the mobile and touch versions and any sites we have now or in the future that reference these Terms of Use (collectively, "Site"). By using the Site and Aidtree’s services through the Site, you agree to these Terms of Use (defined below) and any additional terms applicable to certain programs in which you may elect to participate. You also agree to our Privacy Statement, located at http://www.Aidtree.com/privacy, and acknowledge that you will regularly visit the Terms of Use (defined below) to familiarize yourself with any updates. The Privacy Statement, together with these terms of use, and any other terms contained herein or incorporated herein by reference, are collectively referred to as the "Terms of Use." The term "using" also includes any person or entity that accesses or uses the Site with crawlers, robots, data mining or extraction tools or any other functionality.</p>
+                    <p>IF YOU DO NOT AGREE TO THESE TERMS OF USE, IMMEDIATELY STOP USING THE SITE AND DO NOT USE ANY AIDTREE SERVICE, PARTICIPATE IN ANY PROGRAM OR PURCHASE ANY DISCOUNT GIFT CARD, PRODUCT OR OTHER GOOD OR SERVICE OFFERED THROUGH THE SITE.</p>
+                    <h2>1. About the Site</h2>
+                    <p>The Site is a crowd-funding platform through which certain merchants (“Merchants”) make available rebate/discount gift card offerings (“Rebate/Discount Gift Cards”) (collectively, “Merchant Offerings”). Merchants are the issuers of Rebate/Discount Gift Cards. The Merchant is solely responsible to you for the care and quality of the goods and services it provides. The Merchants will create the Rebate/Discount Gift Cards support specific Causes (“Trees”) which will coincide with the User. These Rebate/Discount Gift Cards are purchased by the User on the Aidtree website at a 50% discount with 90% of the Rebate/Discount Gift Card purchase price, post-processing fees, going to a Cause (“Tree”) previously created on the site. 10% of the purchase price, pre-processing, goes to the Site. Processing fees currently consist of using the billing payment system Braintree only. Additional tools on the site include a Comments/Photo posting section and a User philanthropic performance reporter.</p>
+                    <p>All Merchant Offerings, Products, other available programs, pricing and payment processing methods on the Site may change at any time in Aidtree’s discretion, without notice.</p>
+                    <h2>2. Ownership of the Site</h2>
+                    <p>The Site, any content on the Site and the infrastructure used to provide the Site are proprietary to us, our affiliates, Merchants and other content providers. By using the Site and accepting these Terms of Use: (a) Aidtree grants you a limited, personal, nontransferable, nonexclusive, revocable license to use the Site pursuant to these Terms of Use and to any additional terms and policies set forth by Aidtree; and (b) you agree not to reproduce, distribute, create derivative works from, publicly display, publicly perform, license, sell or re-sell any content, software, products or services obtained from or through the Site without the express permission of Aidtree.</p>
+                    <h2>3. Use of the Site</h2>
+                    <p>As a condition of your use of the Site, you agree that:
+                        <ul>
+                            <li>You are at least 14 years of age;</li>
+                            <li>You will not attempt to use the Site with crawlers, robots, data mining or extraction tools or any other functionality;</li>
+                            <li>Your use of the Site will at all times comply with these Terms of Use;</li>
+                            <li>You will only make legitimate purchases that comply with the letter and spirit of the terms of the respective offers;</li>
+                            <li>You will only make Rebate/Discount Gift Card purchases on the Site to go toward Merchant purchases for your own use and enjoyment while at the same time supporting a Tree financially;</li>
+                            <li>You have the right to provide any and all information you submit to the Site, the information and all such information is accurate, true, current and complete;</li>
+                            <li>You will update and correct information you have submitted to the Site and ensure that it is accurate at all times (out-of-date information will invalidate your account); and,</li>
+                            <li>You will only purchase a Rebate/Discount Gift Card by creating an account on the Site, and any purchase will be subject to the applicable Terms of Sale set forth in these Terms of Use;</li>
+                            <li>You will understand the Merchant can modify the Rebate/Discount Gift Card at any time for any reason. The only requirement is that the Rebate/Discount Gift Card purchased prior to the modification be honored;</li>
+                            <li>You will not use any commentary that is construed by the Site as cyber-bullying, sexually suggestive/foul language, with complaints by other users and confirmation about such activity constituting a warning. Subsequent activity will have the user banned from the Site.</li>
+                            <li>You will not post any nudity/pornography pictures/video on the comment/pictures section of the Site. The Site reserves the right to remove such landingimages/files.</li>
+                            <li>You are welcome to improve the business reach of your Tree by handing Coupon Seeds to Merchants you frequent. You will honor the response of the Merchant and respect the Merchant if there is a request for No Solicitation.</li>
+                            <li>You are to understand that Aidtree will do its’ best effort to validate all Trees to ensure authenticity as mentioned under these Terms of Use. It is unfortunately inevitable that a fraudulent Tree will attempt to raise money. Please inform Aidtree of the questionable Tree here and Aidtree will investigate the validity of your claim. Refunds will not be given for Rebate/Discount Gift Cards purchased and used on behalf of fraudulent Trees.</li>
+                            <li>You are to understand that any Rebate/Discount Gift Cards not used in 30 days from purchased will be refunded to the purchaser. If one coupon of a Multiple-Coupon offer is used the balance of the coupons will not be refunded.</li>
+                        </ul>
+                    </p>
+                    <h2>4. Access to the Site</h2>
+                    <p>Aidtree retains the right, at our sole discretion, to deny service or use of the Site or an account to anyone at any time and for any reason. While we use reasonable efforts to keep the Site and your account accessible, the Site and/or your account may be unavailable from time to time. You understand and agree that there may be interruptions in service or events, Site access or access to your account due to circumstances both within our control (e.g., routine maintenance) and outside of our control.</p>
+                    <h2>5. Modification</h2>
+                    <p>We reserve the right at all times to discontinue or modify any part of these Terms of Use in our sole discretion. If we make changes that affect your use of the Site or our services we will post notice of the change on the Terms of Use page. Any changes to these Terms of Use will be effective upon our posting of the notice; provided that these changes will not apply to Merchant Offerings or Products purchased prior to the effective date of such changes. If you do not agree to the changes, you may close your account and you should not use the Site or any services offered through the Site after the effective date of the changes. We suggest that you revisit our Terms of Use regularly to ensure that you stay informed of any changes. You agree that posting notice of any changes on the Terms of Use page is adequate notice to advise you of these changes, and that your continued use of the Site or our services will constitute acceptance of these changes and the Terms of Use as modified.</p>
+                    <h2>6. Your Account</h2>
+                    <p>You may only create and hold one account on the Site for your personal use and must register using your real name. The User can also create an Alias that allows them to not show their real name publicly. The actual name will only be shown to their personal network and the Tree Administrator under a monitored Contribution Leader Board. You are responsible for updating and correcting information you have submitted to create or maintain your account. As part of your account settings, you have the option to: (a) save, edit or delete your personal information, including, without limitation, payment data; and (b) opt-out of persistent login. You understand and agree that Aidtree shall have no responsibility for any incident arising out of, or related to, your account settings. You must safeguard your password and supervise the use of your account. You are solely responsible for maintaining the security of your account and maintaining settings that reflect your preferences. We will assume that anyone using the Site or transacting through your account is you. You agree that you are solely responsible for any activity that occurs under your account. Your account will expire and you will lose any promotional benefits earned through a Promotional Activity (if held) if your account is not maintained with current information.</p>
+                    <p>Your account is non-transferrable. You cannot sell, combine, or otherwise share it with any other person. Any violation of these Terms of Use, including failure to maintain updated and correct information about your account, will cause your account to fall out of good standing and we may cancel your account in our sole discretion. If your account is cancelled, you may forfeit any pending, current or future promotional account credits and any other forms of unredeemed value in your account. Upon termination, the provisions of these Terms of Use that are by their nature intended to survive termination (e.g., any disclaimers, all limitations of liability and all indemnities) shall survive. We also reserve the right to change or discontinue any aspect or feature of our services or the Site, including, but not limited to, requirements for use.</p>
+                    <p>The Tree Administrator will have the option of creating a Contribution Leader Board for affiliated Tree Users to get credit for their philanthropy.</p>
+                    <h2>7. Your Conduct</h2>
+                    <p>All interactions on the Site must comply with these Terms of Use. To the extent your conduct, in our sole discretion, restricts or inhibits any other user from using or enjoying any part of the Site, we may limit your privileges on the Site and seek other remedies.
+                        <br />The following activities are prohibited on the Site and constitute express violations of these Terms of Use:
+                        <ul>
+                            <li>Submitting any content to the Site that:
+                                <ul>
+                                    <li>Violates applicable laws (including but not limited to intellectual property laws, laws relating to rights of privacy and rights of publicity and laws related to defamation);</li>
+                                    <li>Contains personal information, except when we expressly ask you to provide such information;</li>
+                                    <li>Contains viruses or malware;</li>
+                                    <li>Offers unauthorized downloads of any copyrighted, confidential or private information;</li>
+                                    <li>Has the effect of impersonating others;</li>
+                                    <li>Contains messages by non-spokesperson employees of Aidtree purporting to speak on behalf of Aidtree or provides confidential information concerning Aidtree;</li>
+                                    <li>Contains chain letters of any kind;</li>
+                                    <li>Is purposely inaccurate, commits fraud or falsifies information in connection with your Aidtree account or to create multiple Aidtree accounts; or</li>
+                                    <li>Is protected by copyright, trademark or other proprietary right without the express permission of the owner of the copyright, trademark or other proprietary right.</li>
+                                </ul>
+                            </li>
+                            <li>Attempting to do or actually doing any of the following:
+                                <ul>
+                                    <li>Accessing data not intended for you, such as logging into a server or an account which you are not authorized to access;</li>
+                                    <li>Scanning or monitoring the Site for data gathering purposes in an effort to track sales, usage, aggregate offering information, pricing information or similar data;</li>
+                                    <li>Scanning or testing the security or configuration of the Site or to breach security or authentication measures; or</li>
+                                    <li>Interfering with service to any user in any manner, including, without limitation, by means of submitting a virus to the Site or attempting to overload, “flood,” “spam,” “mail bomb” or “crash” the Site.</li>
+                                </ul>
+                            </li>
+                            <li>Using any of the following:
+                                <ul>
+                                    <li>Frames, framing techniques or framing technology to enclose any content included on the Site without our express written permission;</li>
+                                    <li>Any Site content, including without limitation User Content (defined below), in any meta tags or any other “hidden text” techniques or technologies without our express written permission;</li>
+                                    <li>The Site or any of its contents to advertise or solicit, for any commercial, political or religious purpose or to compete, directly or indirectly, with Aidtree; or</li>
+                                    <li>The Site or any of its resources to solicit consumers, Merchants or other third-parties to become users or partners of other online or offline services directly or indirectly competitive or potentially competitive with Aidtree, including, without limitation, aggregating current or previously offered deals.</li>
+                                </ul>
+                            </li>
+                            <li>Collecting any of the following:
+                                <ul>
+                                    <li>Content from the Site, including, but not limited to, in connection with current or previously offered deals, and featuring such content to consumers in any manner that diverts traffic from the Site without our express written permission; or</li>
+                                    <li>Personal Information (defined in our Privacy Statement), User Content (defined in Section 11 below) or content of any consumers or Merchants.</li>
+                                </ul>
+                            </li>
+                            <li>Engaging in any of the following:
+                                <ul>
+                                    <li>Tampering or interfering with the proper functioning of any part, page or area of the Site or any functions or services provided by Aidtree;</li>
+                                    <li>Taking any action that places excessive demand on our services or imposes, or may impose, an unreasonable or disproportionately large load on our servers or other portion of our infrastructure (as determined in our sole discretion);</li>
+                                    <li>Reselling or repurposing your access to the Site or any purchases made through the Site;</li>
+                                    <li>Exceeding or attempting to exceed quantity limits when purchasing Merchant Offerings or Products, or otherwise using any Aidtree account to purchase Merchant Offerings or Products for resale or for speculative, false, fraudulent or any other purpose not expressly permitted by these Terms of Use and the terms of a specific offer on the Site;</li>
+                                    <li>Accessing, monitoring or copying any content from the Site using any “robot,” “spider,” “scraper” or other automated means or any manual process for any purpose without our express written permission;</li>
+                                    <li>Violating the restrictions in any robot exclusion headers on the Site or bypassing or circumventing other measures employed to prevent or limit access to the Site;</li>
+                                    <li>Aggregating any current or previously-offered deals or content or other information from the Site (whether using links or other technical means or physical records associated with purchases made through the Site) with material from other sites or on a secondary site without our express written permission;</li>
+                                    <li>Deep-linking to any portion of the Site (including, without limitation, the purchase path for any Rebate/Discount Gift Card) without our express written permission;</li>
+                                    <li>Hyperlinking to the Site from any other website without our initial and ongoing consent; or</li>
+                                    <li>Acting illegally or maliciously against the business interests or reputation of Aidtree, our Merchants or our services.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <h2>8. Your Privacy</h2>
+                    <p>We take the privacy of your personal data seriously. We encourage you to carefully review our Privacy Statement for important disclosures about ways that we may collect, use, and share personal data and your choices. Our Privacy Statement is incorporated in these Terms of Use, and available here.</p>
+                    <h2>9. Terms of Sale</h2>
+                    <p>By purchasing or obtaining any Rebate/Discount Gift Card via the Site, you agree to these Terms of Use, including the Terms of Sale, available here.</p>
+                    <h2>10. Copyright and Trademarks</h2>
+                    <p>The Site contains copyrighted material, trademarks and other proprietary information, including, but not limited to, text, software, photos, video, graphics, music and sound and the entire contents of the Site are protected by copyright, trademark and other intellectual property laws of the United States. Aidtree owns a copyright in the selection, coordination, arrangement and enhancement of such content, as well as in the content original to it. You may not modify, distribute, publish, transmit, publicly display, publicly perform, participate in the transfer or sale, create derivative works or in any way exploit any of the content, in whole or in part. Except as otherwise expressly stated under copyright law, no downloading, copying, redistribution, retransmission, publication or commercial exploitation of the content without the express permission of Aidtree or the copyright owner is permitted. If downloading, copying, redistribution, retransmission or publication of copyrighted material is permitted, you will make independent attribution and/or make no changes in or deletion of any author attribution, trademark legend or copyright notice. You acknowledge that you do not acquire any ownership rights by downloading copyrighted material. Any violation of these restrictions may result in a copyright, trademark or other intellectual property right infringement that may subject you to civil and/or criminal penalties.
+                        <br />You will not upload, post or otherwise make available on the Site any material protected by copyright, trademark or other proprietary right without the express permission of the owner of the copyright, trademark or other proprietary right. Aidtree does not have any express burden or responsibility to provide you with indications, markings or anything else that may aid you in determining whether the material in question is copyrighted or trademarked. You will be solely liable for any damage resulting from any infringement of copyrights, trademarks, proprietary rights or any other harm resulting from such a submission.
+                        <br />Aidtree owns trademarks, registered and unregistered, in many countries and "AIDTREE," the Aidtree logos and variations thereof found on the Site are trademarks owned by Aidtree, Inc. or its related entities and all use of these marks inures to the benefit of Aidtree. "AIDTREE" is a trademark registered in the United States of America.
+                        <br />Other marks on the site not owned by Aidtree may be under license from the trademark owner thereof, in which case such license is for the exclusive benefit and use of Aidtree unless otherwise stated, or may be the property of their respective owners. You may not use Aidtree's name, logos, trademarks or brands without Aidtree's express permission.</p>
+                    <h2>11. Tree-User Content Relationship</h2>
+                    <p>A major component of The Site is the interaction between the User and the organizations that they support. The code of conduct regarding user interaction for the gateway of each Tree is set by the controlling organization of the Tree with Aidtree’s code of conduct superseding any organization’s less stringent codes.
+                        <br />Commenting on Aidtree.com as a User will be limited to the User’s social network, Businesses on the Aidtree Network and the Tree Administrator. Aidtree is not responsible for the use or disclosure of any Personal Information that you disclose in connection with User Content.
+                        <ul>
+                            <li>Aidtree.com Cause Registration
+                                <br />Any organization that registers for receipt of funds via Aidtree’s fundraising system is known as a Tree.
+                                <br />User with the authority to raise funds, control the banking account and register the cause/organization to a fundraising concern can register their Tree on Aidtree.com.
+                                <br />User validity is confirmed using phone contacts with the organization, bank verification and web search analysis.
+                                <br />If the User does not have the authority to register the Tree will be placed on probation until the correct User is notified or the Tree is removed for violating Aidtree’s Terms of Use. Aidtree.com also reserves the right to bring the violating User up for criminal charges if bank account registration is deemed fraudulent.
+                                <br />Once the organization is considered valid the registering User is considered to be the Tree Administrator of the Tree.
+                                <br />Contributions received by the Tree will be tracked and analyzed by the Tree Administrator. The Tree Administrator will also receive User and Business comments and scheduling requests for group events.
+                                <br />Aidtree reserves the right to remove any comments that is deemed as bullying and offensive.</li>
+                            <li>Registration Identities and Conduct.
+                                <br />Aidtree.com is an e-commerce website that services philanthropic causes. Aidtree that tracks a Users performance with regards to the number of rebate coupons credited to them, number of businesses added to the Aidtree Business Network, and dollar amount donated to the User’s Tree.
+                                <br />As between you and Aidtree, you shall retain all ownership rights in and to the User Content you submit or post. However, by contributing User Content or other information on or through the Site, you grant Aidtree a royalty-free, perpetual, irrevocable, sub-licensable, fully paid-up, non-exclusive, transferrable, worldwide right and license to use, reproduce, create derivative works from, publish, edit, translate, distribute, perform, display, transmit, offer for sale and sell the User Content alone or as part of other works in any form, media or technology, whether now known or hereafter developed, and to sublicense such rights through multiple tiers of sub-licensees and without compensation to you. You waive any "moral rights" or other rights with respect to attribution of authorship or integrity of materials regarding the User Content that you may have under any applicable law under any legal theory. Aidtree’s license in any User Content or Personal Information submitted includes, but is not limited to, use for promotions, advertising, marketing, market research, merchant feedback, quality control or any other lawful purpose.
+                                <br />As detailed in Section 3, contributing User Content or other information on or through the Site, is limited to individuals over 14 years old. The Site is designed and intended for adults. By contributing User Content or other content on or through the Communities, you affirm that you are over 14 years old. We will promptly delete User Content or other content associated with any account we obtain actual knowledge of that is associated with a registered user who is not at least 14 years old. If you are under 14 years old, please notify us and we will take action.</li>
+                        </ul>
+                    </p>
+                    <h2>12. Unsolicited Ideas</h2>
+                    <p>We do not accept or consider, directly or through any Aidtree employee or agent, unsolicited ideas of any kind, including without limitation, ideas or suggestions relating to new or improved products, enhancements, names or technologies, advertising and marketing campaigns, plans or other promotions. Do not send us (or any of our employees) any unsolicited ideas, suggestions, material, landingimages or other work in any form (“Unsolicited Materials”). If you send us Unsolicited Materials, you understand and agree that the following terms will apply, notwithstanding any cover letter or other terms that accompany them:</p>
+                    <ul>
+                        <li>Aidtree has no obligation to review any Unsolicited Materials, nor to keep any Unsolicited Materials confidential; and</li>
+                        <li>Aidtree will own, and may use and redistribute, Unsolicited Materials for any purpose without restriction and free of any obligation to acknowledge or compensate you.</li>
+                    </ul>
+                    <h2>13. Copyright Policy and Digital Millennium Copyright Act (DMCA) Procedures</h2>
+                    <p>Aidtree reserves the right to terminate your or any third-party’s right to use the Site if such use infringes the copyrights of another. Aidtree may, under appropriate circumstances and at its discretion, terminate your or any third-party’s right to access to the Site, if Aidtree determines that you or a third-party is a repeat infringer. If you believe that any material has been posted via the Site by any third-party in a way that constitutes copyright infringement, and you would like to bring it to Aidtree's attention, you must provide Aidtree's DMCA Agent identified below with the following information: (a) an electronic or physical signature of the person authorized to act on behalf of the owner of the copyrighted work; (b) an identification of the copyrighted work and the location on the Site of the allegedly infringing work; (c) a written statement that you have a good faith belief that the disputed use is not authorized by the owner, its agent or the law; (d) your name and contact information, including telephone number and email address; and (e) a statement by you that the above information in your notice is accurate and, under penalty of perjury, that you are the copyright owner or authorized to act on the copyright owner’s behalf.
+                        <br />The contact information for Aidtree’s DMCA Agent for notice of claims of copyright infringement is: Aidtree, Inc. Attn: Copyright Agent, 305 N. 2nd St., Upland, CA 91786, email: <a href="mailto:dmca@Aidtree.com">dmca@Aidtree.com</a>.</p>
+                    <h2>14. Disclaimer of Warranty</h2>
+                    <p>YOU EXPRESSLY AGREE THAT USE OF THE SITE IS AT YOUR SOLE RISK. NONE OF AIDTREE, ITS SUBSIDIARIES OR AFFILIATES OR ANY OF THEIR RESPECTIVE EMPLOYEES, AGENTS, MERCHANTS, THIRD-PARTY CONTENT PROVIDERS OR LICENSORS OR ANY OF THEIR OFFICERS, DIRECTORS, EMPLOYEES OR AGENTS, WARRANT THAT USE OF THE SITE WILL BE UNINTERRUPTED, SECURE, VIRUS-FREE OR ERROR FREE, NOR DO THEY MAKE ANY WARRANTY AS TO (A) THE RESULTS THAT MAY BE OBTAINED FROM USE OF THE SITE, OR (B) THE ACCURACY, COMPLETENESS OR RELIABILITY OF (I) THE CONTENT ON THE SITE, INCLUDING WITHOUT LIMITATION MERCHANT OFFERINGS, PRODUCTS OR OTHER AVAILABLE PROGRAMS, (II) DESCRIPTIONS OF MERCHANT OFFERINGS, PRODUCTS OR OTHER AVAILABLE PROGRAMS, OR (III) USER CONTENT PROVIDED THROUGH THE SITE. THE SITE AND ALL CONTENT, USER CONTENT AND OTHER INFORMATION CONTAINED ON THE SITE, MERCHANT OFFERINGS, PRODUCTS AND OTHER AVAILABLE PROGRAMS ACCESSIBLE OR AVAILABLE THROUGH THE SITE, ARE MADE ACCESSIBLE OR AVAILABLE ON AN “AS IS” AND “AS AVAILABLE” BASIS. TO THE EXTENT ALLOWED BY APPLICABLE LAW, AIDTREE HEREBY DISCLAIMS ANY AND ALL REPRESENTATIONS, WARRANTIES AND CONDITIONS, WHETHER EXPRESS OR IMPLIED, AS TO THE OPERATION OF THE SITE OR THE CONTENT, USER CONTENT OR OTHER INFORMATION CONTAINED ON THE SITE OR THE MERCHANT OFFERINGS, PRODUCTS OR OTHER AVAILABLE PROGRAMS ACCESSIBLE OR AVAILABLE THROUGH THE SITE, INCLUDING, BUT NOT LIMITED TO, THOSE OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, SUITABILITY AND FITNESS FOR A PARTICULAR PURPOSE, AS WELL AS WARRANTIES IMPLIED FROM A COURSE OF PERFORMANCE OR COURSE OF DEALING.</p>
+                    <h2>15. Limitation of Liability</h2>
+                    <p>IN NO EVENT SHALL AIDTREE, ITS SUBSIDIARIES OR AFFILIATES OR ANY OF THEIR RESPECTIVE EMPLOYEES, OFFICERS, DIRECTORS, AGENTS, MERCHANTS, PARTNERS, THIRD-PARTY CONTENT PROVIDERS OR LICENSORS, OR ANY OF THEIR OFFICERS, DIRECTORS, EMPLOYEES OR AGENTS, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO: (A) YOUR USE OF THE SITE, THE CONTENT, USER CONTENT AND OTHER INFORMATION CONTAINED IN THE SITE; (B) YOUR INABILITY TO USE THE SITE; (C) MODIFICATION OR REMOVAL OF CONTENT SUBMITTED ON THE SITE; (D) THE MERCHANT OFFERINGS, PRODUCTS AND OTHER AVAILABLE PROGRAMS ACCESSIBLE OR AVAILABLE THROUGH THE SITE; OR (E) THESE TERMS OF USE. IN NO EVENT WILL AIDTREE’S LIABILITY IN CONNECTION WITH A MERCHANT OFFERING, PRODUCT, AND OTHER AVAILABLE PROGRAMS EXCEED THE AMOUNTS PAID FOR THE 10% FEE FROM THE APPLICABLE DISCOUNT GIFT CARD. TOTAL AGGREGATE LIABILITY ARISING OUT OF, RELATED TO, OR IN CONNECTION WITH THESE TERMS OF USE SHALL NOT EXCEED THE AMOUNTS PAID BY YOU DURING THE SIX MONTHS PRECEDING THE BRINGING OF ANY CLAIM. YOU AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED TO THE SITE MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES, OR THE CAUSE OF ACTION IS PERMANENTLY BARRED. BECAUSE SOME JURISDICTIONS DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, ALL OR A PORTION OF THE ABOVE LIMITATION MAY NOT APPLY TO YOU.</p>
+                    <h2>16. Electronic Communications</h2>
+                    <p>When you use the Site or send emails to Aidtree, you are communicating with us electronically and consent to receive electronic communications related to your use of the Site. We will communicate with you by email or by posting notices on the Site. You agree that all agreements, notices, disclosures and other communications that are provided to you electronically satisfy any legal requirement that such communications be in writing. Notices from us will be considered delivered to you and effective when sent to the email address you provide on the Site or from which you otherwise email us.</p>
+                    <h2>17. Websites of Others</h2>
+                    <p>The Site contains links to websites maintained by other parties. These links are provided solely as a convenience to you and not because we endorse or have an opinion about the contents on such websites. We expressly disclaim any representations regarding the content or accuracy of materials on such websites or the privacy practices of those websites. If you decide to access websites maintained by other parties, you do so at your own risk. We are not responsible or liable, directly or indirectly, for any damage, loss or liability caused or alleged to be caused by or in connection with any use of or reliance on any content, Products or services available on or through any such linked site or resource.</p>
+                    <h2>18. Indemnification/Release</h2>
+                    <p>You agree to defend, indemnify and hold harmless Aidtree, its subsidiaries and affiliates and their respective directors, officers, employees and agents from and against all claims and expenses, including attorneys’ fees, arising out of or related to: (a) any Merchant Offerings or Products purchased by you through the Site; (b) any User Content submitted or posted by you, in connection with the Site, or any use of the Site in violation of these Terms of Use; (c) fraud you commit or your intentional misconduct or gross negligence; or (d) your violation of any applicable U.S. or foreign law or rights of a third-party.
+                        <br />You are solely responsible for your interactions with Merchants and other users of the Site. To the extent permitted under applicable laws, you hereby release Aidtree from any and all claims or liability related to any product or service of a Merchant, any action or inaction by a Merchant, including but not limited to any harm caused to you by action or inaction of a Merchant, a Merchant’s failure to comply with applicable law and/or failure to abide by the terms of a Merchant Offering and any conduct, speech or User Content, whether online or offline, of any other third-party.</p>
+                    <h2>19. Force Majeure</h2>
+                    <p>Aidtree shall be excused from performance under these Terms of Use, to the extent it is prevented or delayed from performing, in whole or in part, as a result of an event or series of events caused by or resulting from: (a) weather conditions or other elements of nature or acts of God; (b) acts of war, acts of terrorism, insurrection, riots, civil disorders or rebellion; (c) quarantines or embargoes; (d) labor strikes; (e) error or disruption to major computer hardware or networks or software failures; or (g) other causes beyond the reasonable control of Aidtree.</p>
+                    <h2>20. Assignment</h2>
+                    <p>You may not assign these Terms of Use, or any rights, benefits or obligations hereunder, by operation of law or otherwise, without the express written permission of Aidtree. Any attempted assignment that does not comply with these Terms of Use shall be null and void. Aidtree may assign these Terms of Use, in whole or in part, to any third-party in its sole discretion.</p>
+                    <h2>21. Entire Agreement</h2>
+                    <p>The Terms of Use, including the incorporated Terms of Sale, Privacy Statement and other terms incorporated by reference, constitutes the entire agreement and understanding between you and Aidtree with respect to the subject matter hereof and supersedes all prior or contemporaneous communications and proposals, whether oral or written, between you and Aidtree with respect to such subject matter.</p>
+                    <h2>22. Choice of Law</h2>
+                    <p>Any disputes arising out of or related to these Terms of Use and/or any use by you of the Site or Aidtree’s services shall be governed by the laws of the State of California, without regard to its choice of law rules and without regard to conflicts of laws principles.
+                        <br />I If you reside in Canada, any disputes arising out of or related to these Terms of Use and/or any use by you of the Site or Aidtree’s services shall be governed by the laws of the Province in which you reside at the time you enter into these Terms of Use, without regard to its choice of law rules and without regard to conflicts of laws principles. Aidtree and you specifically disclaim the application of the United Nations Convention on Contracts for the International Sale of Goods as that Convention may be incorporated into applicable law.</p>
+                    <h2>23. Dispute Resolution</h2>
+                    <p><span a="">Binding Arbitration</span>Except as specifically stated herein, any dispute or claim between you and Aidtree arising out of, or relating in any way to, the Terms of Use, the Site or your use of the Site, or any Products, Merchant Offerings or services offered or distributed through the Site (“Disputes”) shall be resolved exclusively by final, binding arbitration; except that you may bring a qualifying claim over a Dispute in a small claims court in San Bernardino Count, California. By virtue of this Agreement (defined below), you and Aidtree are each giving up the right to go to court and have a Dispute heard by a judge or jury (except as otherwise set forth in this Section 24(a) or Section 24(d)). The provisions of this Section 24 shall constitute your and Aidtree’s written agreement to arbitrate Disputes under the Federal Arbitration Act (“Agreement”). Any modification to this Agreement shall be in writing and signed by you and Aidtree. The arbitration will be administered by the American Arbitration Association (“AAA”) and conducted before a single arbitrator pursuant to its rules, including the AAA’s Supplementary Procedures for Consumer-Related Disputes, available at http://www.adr.org or by calling 800-778-7879. The arbitrator will apply and be bound by this Agreement, apply applicable law and the facts, and issue a reasoned award.
+                        <br />To begin an arbitration proceeding, you must comply with the limitations provision set forth in Section 24(e) and submit the Dispute by utilizing the forms available at http://www.adr.org. Payment of all filing, administration and arbitrator fees will be governed by the AAA's rules. Aidtree will reimburse those fees for Disputes totaling less than $10,000 unless the arbitrator determines the Dispute is frivolous. Likewise, Aidtree will not seek attorneys' fees and costs in arbitration unless the arbitrator determines the Dispute is frivolous. The arbitration will be conducted based upon written submissions unless you request and/or the arbitrator determines that a telephone or in-person hearing is necessary. If the arbitrator grants the request or determines an in-person hearing is necessary, the hearing will proceed in San Bernardino County, California, unless the arbitrator determines or we agree that the matter should proceed in the county in which you reside.
+                        <br /><span b="">No Class Action Matters.</span>We each agree that we shall bring any Dispute against the other in our respective individual capacities and not as a plaintiff or class member in any purported class, representative proceeding or as an association. In addition, we each agree that Disputes shall be arbitrated only on an individual basis and not in a class, consolidated or representative action. The arbitrator does not have the power to vary these provisions.
+                        <br />
+                    </p>
+                    <h2>24. Additional Disclosures</h2>
+                    <p>No waiver by either you or Aidtree of any breach or default or failure to exercise any right allowed under these Terms of Use is a waiver of any preceding or subsequent breach or default or a waiver or forfeiture of any similar or future rights under our Terms of Use. The section headings used herein are for convenience only and shall be of no legal force or effect. If a court of competent jurisdiction holds any provision of our Agreement invalid, such invalidity shall not affect the enforceability of any other provisions contained in these Terms of Use, and the remaining portions of our Agreement shall continue in full force and effect.
+                        <br />You are contracting with Aidtree, Inc. Correspondence should be directed to: Aidtree, Inc., 305 N. 2nd Ave., Upland, CA 91786
+                        <br /><a href="mailto:Questions@aidtree.com">Questions@aidtree.com</a>.
+                        <br />If you are a California resident, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 400 R Street, Sacramento, CA 95814, or by telephone at (800) 952-5210.
+                        <br />The provisions of these Terms of Use apply equally to and are for the benefit of Aidtree, its subsidiaries, affiliates, Merchants and its third-party content providers and licensors, and each shall have the right to assert and enforce such provisions directly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container clearfix">
+            <div class="row">
+                <div class="large-8 columns">
+                    <ul class="inline-list">
+                        <li><a href="/how-it-works">How It Works</a></li>
+                        <li><a data-intro="We value your feedback so please reach us via the &#39;Contact Us&#39; page. All comments are welcome no matter how small, even to say hello." data-step="8" href="/contact-us">Contact Us</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/businesses/new">Own A Business?</a></li>
+                        <li><a href="/trees/new">Create A Tree</a></li>
+                        <li><a href="/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="large-4 columns">
+                    <div>
+                        <a class="logo" href="/"><img alt="Logo white" src="/assets/logo-white-dddff4d638bc0733a8046a1c1abf8425.png" /></a>
+                    </div>
+                    <p>&copy; 2016 AIDTREE. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="//maps.googleapis.com/maps/api/landingjs?v=3.13&amp;sensor=false"></script>
+    <script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
+    <script src="/assets/application-e7c13b083cf12e50fb59ee659b4caea1.js"></script>
+    <div class="reveal-modal" data-reveal="" id="confirmation"></div>
+    <script type="text/javascript">
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: '1583390391886677',
+                xfbml: true,
+                version: 'v2.2'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+</body>
+
+</html>
